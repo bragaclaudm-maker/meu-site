@@ -46,6 +46,27 @@
       min-height: 0dvh;
     }
 
+    /* ====================================
+     EFEITO DE RELEVO E ELEVAÇÃO NOS CARDS
+     ==================================== */
+
+    .item {
+      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        border-color 0.3s ease !important;
+      will-change: transform;
+      cursor: pointer;
+    }
+
+    .item:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.75),
+        0 0 22px rgba(255, 200, 69, 0.25);
+      border-color: var(--yellow) !important;
+      /* Usa o seu amarelo oficial */
+    }
+
+
     html,
     body,
     input,
@@ -1623,8 +1644,7 @@
     <div class="grid">
       <div class="item featured">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLtmU7-WXG0VWzNrcmPh5CKIKfPEWwfGwJclDjC_C183dfye7zEdHUtPLqvdhk7kxnRCZy7QkDtS4FGT4_XsTrG4DKlTduNw7sIyIee9VcY5Bm1kTROLs59nDhCRUcRGhojLZNckSa9D-EGg5mDYCiGUvG1dK4KGsav0MTEZnPnn2ORr6mLxPyu840U3t0nsfI_fSljDzMsuDCry4lEDPNPpBu7zEwXd155MQAYjOKgQt08BHgJm46GN4_Hl=s1600"
-          alt="Tilápia em tiras com batatas crinkle">
+          src="fotos do site/filecomfritas.jpg">
         <div class="body">
           <span class="badge">⭐ Prato da casa</span>
           <div class="item-title-row">
@@ -1632,13 +1652,13 @@
             <span class="price">R$ 75,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('tilapia-fritas', 'Filé de Tilápia + Fritas', 75.00, 'https://lh3.googleusercontent.com/aida/AP1WRLtmU7-WXG0VWzNrcmPh5CKIKfPEWwfGwJclDjC_C183dfye7zEdHUtPLqvdhk7kxnRCZy7QkDtS4FGT4_XsTrG4DKlTduNw7sIyIee9VcY5Bm1kTROLs59nDhCRUcRGhojLZNckSa9D-EGg5mDYCiGUvG1dK4KGsav0MTEZnPnn2ORr6mLxPyu840U3t0nsfI_fSljDzMsuDCry4lEDPNPpBu7zEwXd155MQAYjOKgQt08BHgJm46GN4_Hl=s1600')">🛒
+            onclick="addToCart('tilapia-fritas', 'Filé de Tilápia + Fritas', 75.00, 'fotos do site/filecomfritas.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLvcyLdX8xzLb07MsKbov2NY_qJcURs6-7fTcY02g3Nb0UaBxWG-Lof09V_1AJBqm8bITQFeadJOUdmm2oI-TG_O26EtoZptr_Kycn3u_f4DCzbbhUUqTD8sMNArTq5WTX1dBuL80q59ZGomPMRfg5Xlz4UAGU9z21OE4q9I_75S78_0Klsc0TJ3s3kwIORr0eWZjxXxw3uvTlMEXdtjEVMwMsoXrJslnsg-VCRo92hTCSz8NBofTeTym_xG=s1600"
+          src="fotos do site/parmegi.png"
           alt="Filé a Parmegiana">
         <div class="body">
           <div class="item-title-row">
@@ -1646,13 +1666,13 @@
             <span class="price">R$ 65,90</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('file-parmegiana', 'Filé a Parmegiana', 65.90, 'https://lh3.googleusercontent.com/aida/AP1WRLvcyLdX8xzLb07MsKbov2NY_qJcURs6-7fTcY02g3Nb0UaBxWG-Lof09V_1AJBqm8bITQFeadJOUdmm2oI-TG_O26EtoZptr_Kycn3u_f4DCzbbhUUqTD8sMNArTq5WTX1dBuL80q59ZGomPMRfg5Xlz4UAGU9z21OE4q9I_75S78_0Klsc0TJ3s3kwIORr0eWZjxXxw3uvTlMEXdtjEVMwMsoXrJslnsg-VCRo92hTCSz8NBofTeTym_xG=s1600')">🛒
+            onclick="addToCart('file-parmegiana', 'Filé a Parmegiana', 65.90, 'fotos do site/parmegi.png')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLvhV4Y0QxKqbGLq6FbLPWdBFyOYPC8AJCIzyQvbAXVcP42TLKP8_rYfngmnZECBCPewx8CBAOIaI0RNsuydR_GJr9wdtWej6eu0AtfOExmdwYr0zSaAUmtLlRKDbbToCxAr4rcQC4gUZl8XEmqtFk-EjfZzj55Rjspl0purDAcCpNNqSTOsolXcZ-yOGo8x1opTty0aJvhsEUy-7iGB6LKA1qzJCyL5c8H3WiLqKVRc7dEpWrbanOFgt8M=s1600"
+          src="fotos do site/2433675570.png"
           alt="Batata frita">
         <div class="body">
           <div class="item-title-row">
@@ -1660,13 +1680,13 @@
             <span class="price">R$ 18,90</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('porcao-fritas', 'Porção de Fritas', 18.90, 'https://lh3.googleusercontent.com/aida/AP1WRLvhV4Y0QxKqbGLq6FbLPWdBFyOYPC8AJCIzyQvbAXVcP42TLKP8_rYfngmnZECBCPewx8CBAOIaI0RNsuydR_GJr9wdtWej6eu0AtfOExmdwYr0zSaAUmtLlRKDbbToCxAr4rcQC4gUZl8XEmqtFk-EjfZzj55Rjspl0purDAcCpNNqSTOsolXcZ-yOGo8x1opTty0aJvhsEUy-7iGB6LKA1qzJCyL5c8H3WiLqKVRc7dEpWrbanOFgt8M=s1600')">🛒
+            onclick="addToCart('porcao-fritas', 'Porção de Fritas', 18.90, 'fotos do site/2433675570.png')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLtg1LmJmErWxdvPS997dRNqVrVC7UFNAjDRgTU-uxxGUZEH__tRXPJygRK4m2N3rf5Jzfe86V6jLwAIVonj-48PBn4g8yUU2GU0FcjIRCewefnA70oT-WRvbRRkCjmlg7oPVDX_tX2CVwlYVJSZrR-_D4yM9Tex4qlhl-xHZ2QdHbHLY8L-xkJnw0NDNhqHO5beunxtQhsB8r831FAPSBZU0x1yv0TKhe1UAbyP7q7ImNzH3FAO90m6wAo=s1600"
+          src="fotos do site/file sem btt.jpg"
           alt="Iscas de Peixe Crocante">
         <div class="body">
           <div class="item-title-row">
@@ -1674,14 +1694,14 @@
             <span class="price">R$ 60,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('iscas-peixe', 'Filé sem Batata', 49.90, 'https://lh3.googleusercontent.com/aida/AP1WRLtg1LmJmErWxdvPS997dRNqVrVC7UFNAjDRgTU-uxxGUZEH__tRXPJygRK4m2N3rf5Jzfe86V6jLwAIVonj-48PBn4g8yUU2GU0FcjIRCewefnA70oT-WRvbRRkCjmlg7oPVDX_tX2CVwlYVJSZrR-_D4yM9Tex4qlhl-xHZ2QdHbHLY8L-xkJnw0NDNhqHO5beunxtQhsB8r831FAPSBZU0x1yv0TKhe1UAbyP7q7ImNzH3FAO90m6wAo=s1600')">🛒
+            onclick="addToCart('iscas-peixe', 'Filé sem Batata', 60.00, 'fotos do site/file sem btt.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <!-- 10 PLACEHOLDERS PARA NOVOS ITENS -->
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLs6pNmPL-lmyuNETlZHLMIusbRIQs5uQ1Km4qycw-jofGffBPhu2gq4-SoRyCIc8QwRXqISmByrGcZBzh1b1FEsh04wKv5_LxMHWrekbuS8OQYnuWgCUfHAVq-oj0_qWapYj8b1jxgKPDca5lOGyxc2FAvT6IOBL7VrlW64j5xl4XGfJN16MXcInFTkfaZZGQcCfkCACKBrEQDgo6BktfPYn-2TNl9dsyr-M3F_qCW-hgL4TZFgnx3fSTI=s1600"
+          src="fotos do site/Filégreilado.jpg"
           alt="Item 1">
         <div class="body">
           <div class="item-title-row">
@@ -1689,13 +1709,13 @@
             <span class="price">R$ 50,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('item-1', 'Filé Grelhado', 50.00, 'https://lh3.googleusercontent.com/aida/AP1WRLs6pNmPL-lmyuNETlZHLMIusbRIQs5uQ1Km4qycw-jofGffBPhu2gq4-SoRyCIc8QwRXqISmByrGcZBzh1b1FEsh04wKv5_LxMHWrekbuS8OQYnuWgCUfHAVq-oj0_qWapYj8b1jxgKPDca5lOGyxc2FAvT6IOBL7VrlW64j5xl4XGfJN16MXcInFTkfaZZGQcCfkCACKBrEQDgo6BktfPYn-2TNl9dsyr-M3F_qCW-hgL4TZFgnx3fSTI=s1600')">🛒
+            onclick="addToCart('item-1', 'Filé Grelhado', 50.00, 'fotos do site/Filégreilado.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLueOddPnfxM5Zx7nIAVXm7AIKiCyurHOXWwfbaJ1ZUUezPF5AMbQkzPKBz4AF3mECHpHQYRA3qky4eZeqWO9BBaJ0HOf8O8aNLAby8Zz15ETkBFfLJncSLsG3RvJrai5UY9Sx_5g7v3b4By1w3qj8rYksR-2dwK7y-W0KAUIrAJObkBvhbwr2iRc6IF0vUizOWJYd4m-TV2FQ0gVzEAiwB6aXOxPFtAw-aG7sQOgiOnhre7KuSe36O0LWXB=s1600"
+          src="fotos do site/ceviche.jpg"
           alt="Item 2">
         <div class="body">
           <div class="item-title-row">
@@ -1703,67 +1723,82 @@
             <span class="price">R$ 50,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('item-2', 'Ceviche', 50.00, 'https://lh3.googleusercontent.com/aida/AP1WRLueOddPnfxM5Zx7nIAVXm7AIKiCyurHOXWwfbaJ1ZUUezPF5AMbQkzPKBz4AF3mECHpHQYRA3qky4eZeqWO9BBaJ0HOf8O8aNLAby8Zz15ETkBFfLJncSLsG3RvJrai5UY9Sx_5g7v3b4By1w3qj8rYksR-2dwK7y-W0KAUIrAJObkBvhbwr2iRc6IF0vUizOWJYd4m-TV2FQ0gVzEAiwB6aXOxPFtAw-aG7sQOgiOnhre7KuSe36O0LWXB=s1600')">🛒
+            onclick="addToCart('item-2', 'Ceviche', 50.00, 'fotos do site/ceviche.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLt9SwVA9AA5X9UGvhxJbrXzRAnxsKG4o5D5r4GMHpcrsmKRPNreRc0c0ummWNtQuXAUNqff2eZRxYN3DWU-E3KeVpBtBvz5RjMO0KtmC9mmvtK3yCnRBchDsDZ8A-7WrTxPQEDLTqktw-QaMGcvs-VPFPXYMCcpMeXsEEuGux7DDvJGmBbAF4xbUkdRhEOh1CT2jh9P8efWkRhw3nAGd_TskY0KPk2Ahlx2zLHQgAP7jGDmxLd64YdhOGqT=s1600"
-          alt="Item 4">
-        <div class="body">
-          <div class="item-title-row">
-            <h3>Nuggets Crocante</h3>
-            <span class="price">R$ 35,00</span>
-          </div>
-          <button class="add-to-cart-btn"
-            onclick="addToCart('item-4', 'Nuggets Crocante', 35.00, 'https://lh3.googleusercontent.com/aida/AP1WRLt9SwVA9AA5X9UGvhxJbrXzRAnxsKG4o5D5r4GMHpcrsmKRPNreRc0c0ummWNtQuXAUNqff2eZRxYN3DWU-E3KeVpBtBvz5RjMO0KtmC9mmvtK3yCnRBchDsDZ8A-7WrTxPQEDLTqktw-QaMGcvs-VPFPXYMCcpMeXsEEuGux7DDvJGmBbAF4xbUkdRhEOh1CT2jh9P8efWkRhw3nAGd_TskY0KPk2Ahlx2zLHQgAP7jGDmxLd64YdhOGqT=s1600')">🛒
-            Adicionar ao Pedido</button>
-        </div>
-      </div>
-      <div class="item">
-        <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLs-4WfDbD1M5d44A5qHEsWLkUC4R5zJgWApro5eEB_vdlxn5ZL-0AqrmKn_6ssWj2Cxzyjipke8bKcis5yZnLNwb8lCRjJvr8kKDfOKq04d_2A-N7pCNTR_MryeYNKKhM_qjd49JVzlD1SblZ-GQopAJU-IRtGdqa2o8eqCvh4Jj_W7YHrbhBdrh0YeOppvid9jszvKAqIQPXjpBrKiC0NOJxYwiDjzKOTYTDL9MsfJ5FTLvVw1kw1wzXsN=s1600"
+          src="fotos do site/filé ao molho branco.jpg"
           alt="Item 5">
         <div class="body">
           <div class="item-title-row">
             <h3>Filé ao Molho Branco</h3>
-            <span class="price">R$ 00,00</span>
+            <span class="price">R$ 49,90</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('item-5', 'Filé ao molho Branco', 0.00, 'https://lh3.googleusercontent.com/aida/AP1WRLs-4WfDbD1M5d44A5qHEsWLkUC4R5zJgWApro5eEB_vdlxn5ZL-0AqrmKn_6ssWj2Cxzyjipke8bKcis5yZnLNwb8lCRjJvr8kKDfOKq04d_2A-N7pCNTR_MryeYNKKhM_qjd49JVzlD1SblZ-GQopAJU-IRtGdqa2o8eqCvh4Jj_W7YHrbhBdrh0YeOppvid9jszvKAqIQPXjpBrKiC0NOJxYwiDjzKOTYTDL9MsfJ5FTLvVw1kw1wzXsN=s1600')">🛒
+            onclick="addToCart('item-5', 'Filé ao molho Branco', 49.90, 'fotos do site/filé ao molho branco.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLsnmn6vRQV6hwdmGbPxzsbgmDe1tgB6mAerPJ-Ls8EHgLXPScRCwnng6i9PNn_E0OUuUJNxcYEJ9daADmGaY6CZ9jHxZt6835lKHTxZypkKm6WWg1aqRpqGxKsaG0o8JvB5FRtFd2v9jcBOVpIB8okc6HcQmhjKyDB6QsZd-vJZlJWoAYGe3jLYViRheE-KScgcddKY6-UrcMm8b2oALy4MQQqe7WKNlToogKhe7h6PXQRgL3Dm9jheIaA=s1600"
+          src="fotos do site/file com legumes.jpg"
           alt="Item 6">
         <div class="body">
           <div class="item-title-row">
             <h3>Peixe Grelhado Com Legumes</h3>
-            <span class="price">R$ 00,00</span>
+            <span class="price">R$ 40,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('item-6', 'Peixe Grelhado Com Legumes', 0.00, 'https://lh3.googleusercontent.com/aida/AP1WRLsnmn6vRQV6hwdmGbPxzsbgmDe1tgB6mAerPJ-Ls8EHgLXPScRCwnng6i9PNn_E0OUuUJNxcYEJ9daADmGaY6CZ9jHxZt6835lKHTxZypkKm6WWg1aqRpqGxKsaG0o8JvB5FRtFd2v9jcBOVpIB8okc6HcQmhjKyDB6QsZd-vJZlJWoAYGe3jLYViRheE-KScgcddKY6-UrcMm8b2oALy4MQQqe7WKNlToogKhe7h6PXQRgL3Dm9jheIaA=s1600')">🛒
+            onclick="addToCart('item-6', 'Peixe Grelhado Com Legumes', 40.00, 'fotos do site/file com legumes.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
+          <div class="item">
+        <img class="art"
+          src="fotos do site/arrozwhite.jpg"
+          alt="Item 8">
+        <div class="body">
+          <div class="item-title-row">
+            <h3>Arroz Branco</h3>
+            <span class="price">R$ 15,00</span>
+          </div>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('item-8', 'Arroz Branco', 15.00, 'fotos do site/arrozwhite.jpg')">🛒
+            Adicionar ao Pedido</button>
+        </div> 
+      </div> 
+             <div class="item">
+        <img class="art"
+          src="fotos do site/tropeiro.jpg"
+          alt="Item 9">
+        <div class="body">
+          <div class="item-title-row">
+            <h3>Feijão Tropeiro</h3>
+            <span class="price">R$ 23,90</span>
+          </div>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('item-9', 'Feijão Tropeiro', 23.90, 'fotos do site/tropeiro.jpg')">🛒
+            Adicionar ao Pedido</button>
+        </div> 
+      </div> 
       <div class="item">
         <img class="art"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLsqkhaOay0UCVEMAei8nvJiqimy9-jxJZj-8xfPYUX0DyV2wBlhLaHtlQ6aObfrQJ-iAjuAf97myRc_ltDUVSOIuprJru_ZLK8zS7MAEjADbCeH9_1xtF5DxIUIk-3CEwztc1codKmizC-csh00CS9RrpqW2ykYzLpMDpw_4SQS7FMc78ZanejmK-R7pWjpU2GOciQkBHeog328bdr4mgHc9UPK-OT9wJlb4p7xagGZ64MQwkcHh9bkPv0=s1600"
+          src="fotos do site/batata com farofa de bacon.jpg"
           alt="Item 7">
         <div class="body">
           <div class="item-title-row">
             <h3>Batata Crinkle ao Creme 4 Queijos</h3>
-            <span class="price">R$ 00,00</span>
+            <span class="price">R$ 40,00</span>
           </div>
           <button class="add-to-cart-btn"
-            onclick="addToCart('item-7', 'Batata Crinkle ao Creme 4 Queijos', 0.00, 'https://lh3.googleusercontent.com/aida/AP1WRLsqkhaOay0UCVEMAei8nvJiqimy9-jxJZj-8xfPYUX0DyV2wBlhLaHtlQ6aObfrQJ-iAjuAf97myRc_ltDUVSOIuprJru_ZLK8zS7MAEjADbCeH9_1xtF5DxIUIk-3CEwztc1codKmizC-csh00CS9RrpqW2ykYzLpMDpw_4SQS7FMc78ZanejmK-R7pWjpU2GOciQkBHeog328bdr4mgHc9UPK-OT9wJlb4p7xagGZ64MQwkcHh9bkPv0=s1600')">🛒
+            onclick="addToCart('item-7', 'Batata Crinkle ao Creme 4 Queijos', 40.00, 'fotos do site/batata com farofa de bacon.jpg')">🛒
             Adicionar ao Pedido</button>
         </div>
       </div>
     </div>
+    
   </section>
 
   <section class="cta-final">
